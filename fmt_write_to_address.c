@@ -36,6 +36,7 @@ struct arg_struct parse_args(int size, char **argv) {
 
    --size;
 
+   //TODO: There is a potential for UB to be introduced here when we switch(argv[i][1])
    for(i = 1; i < size; ++i) {
       if(argv[i][0] == '-') {
          switch(argv[i][1]) {
